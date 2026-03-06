@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const phonePrimary = "+91 99677 56611";
@@ -52,19 +53,19 @@ export default function Home() {
       <header className="border-b border-amber-100 bg-white/80 backdrop-blur sticky top-0 z-40">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 lg:px-8 lg:py-5">
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <div className="relative h-9 w-9 sm:h-11 sm:w-11 shrink-0 overflow-hidden rounded-full bg-amber-50 ring-2 ring-amber-300">
+            <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="relative h-9 w-9 sm:h-11 sm:w-11 shrink-0 flex overflow-hidden rounded-full bg-amber-50 ring-2 ring-amber-300">
               <Image
                 src="/logo.png"
                 alt="Andheri Dental Clinic logo"
                 fill
                 className="object-contain"
               />
-            </div>
-            <div className="leading-tight min-w-0 hidden sm:block">
+            </Link>
+            <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="leading-tight min-w-0 hidden sm:block">
               <p className="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-amber-700 truncate sm:whitespace-normal">
                 Andheri Dental Clinic
               </p>
-            </div>
+            </Link>
           </div>
 
           {/* Mobile Phone Number */}
@@ -100,7 +101,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </header>
+      </header >
 
       <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-8 lg:px-8 lg:pb-24 lg:pt-12">
         {/* 1. Hero + Quick Appointment Form */}
@@ -722,6 +723,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }
