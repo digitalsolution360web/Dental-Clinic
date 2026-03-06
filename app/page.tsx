@@ -712,7 +712,7 @@ export default function Home() {
               </h3>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com/andheridentalclinic"
+                  href="https://www.instagram.com/andheri_dental_clinic_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-11 w-11 rounded-xl bg-slate-800 flex items-center justify-center transition-all hover:bg-gradient-to-tr hover:from-purple-600 hover:to-orange-500 hover:scale-110 shadow-lg hover:shadow-orange-500/20"
@@ -720,7 +720,7 @@ export default function Home() {
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://facebook.com/andheridentalclinic"
+                  href="https://www.facebook.com/profile.php?id=61578273000643"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-11 w-11 rounded-xl bg-slate-800 flex items-center justify-center transition-all hover:bg-blue-600 hover:scale-110 shadow-lg hover:shadow-blue-600/20"
