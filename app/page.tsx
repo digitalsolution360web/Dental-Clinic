@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Facebook, Instagram, Youtube, Phone, MapPin } from "lucide-react";
 
 export default function Home() {
   const phonePrimary = "+91 99677 56611";
@@ -638,10 +639,10 @@ export default function Home() {
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-60">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
+              {/* <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
                 <span className="h-2 w-2 rounded-full bg-amber-400"></span>
                 Free Consultation
-              </div>
+              </div> */}
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
                 <span className="h-2 w-2 rounded-full bg-amber-400"></span>
                 WhatsApp Support
@@ -687,17 +688,20 @@ export default function Home() {
               <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white">
                 Visit Us
               </h3>
-              <address className="text-sm font-bold leading-relaxed text-slate-400 not-italic">
-                Shop no. 9, Ground Floor,<br />
-                Moonlight C.H.S. Ltd, Chakala,<br />
-                Andheri East, Mumbai 400093
-              </address>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
+                <address className="text-sm font-bold leading-relaxed text-slate-400 not-italic">
+                  Shop no. 9, Ground Floor,<br />
+                  Moonlight C.H.S. Ltd, Chakala,<br />
+                  Andheri East, Mumbai 400093
+                </address>
+              </div>
               <div className="pt-4 space-y-3">
-                <a href={phonePrimaryHref} className="flex items-center gap-3 text-sm font-black text-amber-400 hover:text-amber-300 transition-colors">
-                  <span>📞</span> {phonePrimary}
+                <a href={phonePrimaryHref} className="flex items-center gap-3 text-sm font-black text-amber-400 hover:text-amber-300 transition-all hover:translate-x-1">
+                  <Phone className="h-4 w-4" /> {phonePrimary}
                 </a>
-                <a href={phoneSecondaryHref} className="flex items-center gap-3 text-sm font-black text-slate-400 hover:text-white transition-colors">
-                  <span>📞</span> {phoneSecondary}
+                <a href={phoneSecondaryHref} className="flex items-center gap-3 text-sm font-black text-slate-400 hover:text-white transition-all hover:translate-x-1">
+                  <Phone className="h-4 w-4" /> {phoneSecondary}
                 </a>
               </div>
             </div>
@@ -707,9 +711,30 @@ export default function Home() {
                 Follow Us
               </h3>
               <div className="flex gap-4">
-                <a href="#" className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center transition-colors hover:bg-amber-600">IG</a>
-                <a href="#" className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center transition-colors hover:bg-amber-600">FB</a>
-                <a href="#" className="h-10 w-10 rounded-xl bg-slate-800 flex items-center justify-center transition-colors hover:bg-amber-600">YT</a>
+                <a
+                  href="https://instagram.com/andheridentalclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-11 w-11 rounded-xl bg-slate-800 flex items-center justify-center transition-all hover:bg-gradient-to-tr hover:from-purple-600 hover:to-orange-500 hover:scale-110 shadow-lg hover:shadow-orange-500/20"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://facebook.com/andheridentalclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-11 w-11 rounded-xl bg-slate-800 flex items-center justify-center transition-all hover:bg-blue-600 hover:scale-110 shadow-lg hover:shadow-blue-600/20"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://youtube.com/@andheridentalclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-11 w-11 rounded-xl bg-slate-800 flex items-center justify-center transition-all hover:bg-red-600 hover:scale-110 shadow-lg hover:shadow-red-600/20"
+                >
+                  <Youtube className="h-5 w-5" />
+                </a>
               </div>
               <div className="pt-8">
                 <p className="text-[10px] font-black uppercase tracking-widest text-slate-600">
