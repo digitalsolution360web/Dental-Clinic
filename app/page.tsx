@@ -178,11 +178,10 @@ export default function Home() {
             className="flex flex-col justify-center rounded-2xl bg-[#B8860B] p-5 shadow-lg shadow-amber-100 ring-1 ring-amber-100 sm:p-6"
           >
             <h2 className="text-lg font-semibold text-white sm:text-xl">
-              Book Your Free Consultation
+             Book Your  Consultation
             </h2>
             <p className="mt-1 text-xs text-amber-50 sm:text-sm">
-              Share a few details and our team will call you to confirm your
-              appointment.
+              Takes 30 seconds. No payment needed. Our team will call you to confirm your slot.
             </p>
 
             <form
@@ -245,6 +244,7 @@ export default function Home() {
                   <option>Smile Makeover</option>
                   <option>Kids Dentistry</option>
                   <option>General Checkup / Cleaning</option>
+                   <option>Others</option>
                 </select>
               </div>
 
@@ -267,12 +267,12 @@ export default function Home() {
                 type="submit"
                 className="mt-2 flex w-full items-center justify-center rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-500/40 transition hover:bg-emerald-600"
               >
-                📅 Book Free Consultation
+                📅 Reserve My Slot Now
               </button>
 
               <p className="text-[11px] leading-snug text-amber-50">
-                No charges for consultation. Our team will confirm your
-                appointment time over call or WhatsApp.
+                Our team will confirm your
+                appointment time over call / WhatsApp.
               </p>
             </form>
           </div>
