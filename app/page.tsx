@@ -444,7 +444,7 @@ export default function Home() {
                   href="#appointment"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-amber-600 px-8 py-4 text-sm font-black text-white shadow-xl shadow-amber-900/10 transition-all duration-300 hover:bg-amber-700 hover:-translate-y-1"
                 >
-                  Grab Offer & Book Slot
+                 Claim Your Offer — Book in 30 Seconds
                   <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
                 </a>
               </div>
