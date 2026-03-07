@@ -138,9 +138,7 @@ export default function Home() {
             </div>
 
             <p className="max-w-xl text-sm text-slate-600 sm:text-base">
-              Providing gentle, modern dental care with advanced technology and
-              a focus on comfort. From routine checkups to complete smile
-              makeovers, we care for your entire family.
+             Trusted by 1,000+ families in Andheri. Expert Periodontist Dr. Poonam Singh offers advanced, gentle dental treatments — from implants to braces — using the latest technology. Walk in comfortable. Walk out smiling.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -148,13 +146,13 @@ export default function Home() {
                 href="#appointment"
                 className="inline-flex items-center justify-center rounded-full bg-amber-600 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-amber-500/40 transition hover:bg-amber-700"
               >
-                📅 Book Free Consultation
+                📅 Book Consultation
               </a>
               <a
                 href={phonePrimaryHref}
                 className="inline-flex items-center justify-center rounded-full border border-amber-200 bg-white px-5 py-3 text-sm font-semibold text-amber-800 shadow-sm transition hover:border-amber-300 hover:bg-amber-50"
               >
-                📞 Call Now: {phonePrimary}
+                📞 Call / WhatsApp: {phonePrimary}
               </a>
             </div>
 
@@ -163,13 +161,13 @@ export default function Home() {
                 <span className="h-7 w-7 rounded-full bg-amber-100 text-center text-lg leading-7">
                   😊
                 </span>
-                <span>1000+ Happy Patients</span>
+                <span>10+ Years Experience</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-7 w-7 rounded-full bg-amber-100 text-center text-lg leading-7">
                   🦷
                 </span>
-                <span>Painless &amp; gentle treatments</span>
+                <span>Zero Pain Guarantee</span>
               </div>
             </div>
           </div>
