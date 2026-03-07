@@ -453,8 +453,8 @@ export default function Home() {
             <div className="mt-12 grid gap-6 sm:grid-cols-3">
               {[
                 {
-                  title: "Free Dental Checkup",
-                  desc: "Complete oral health evaluation at zero consultation cost.",
+                  title: "Dental Checkup",
+                  desc: "Complete oral health evaluation.",
                   img: "/IMG_8415 2.JPG.jpeg",
                   tag: "NEW PATIENT"
                 },
