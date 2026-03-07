@@ -86,19 +86,20 @@ export default function Home() {
             >
               📞 Call Now
             </a>
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-green-500/40 transition hover:bg-green-600"
-            >
-              💬 WhatsApp
-            </a>
+            <div className="flex flex-col items-center justify-center bg-amber-50 border border-amber-200 rounded-full px-5 py-1.5 shadow-sm">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-600 mb-0.5 leading-none">Book Appointment</span>
+              <a
+                href={phonePrimaryHref}
+                className="text-base font-black tracking-tight text-slate-800 leading-none transition hover:text-amber-700"
+              >
+                +91 91996775661
+              </a>
+            </div>
             <a
               href="#appointment"
               className="rounded-full bg-amber-600 px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-amber-500/40 transition hover:bg-amber-700"
             >
-              📅 Book Appointment
+              📅 Book Consultation
             </a>
           </div>
         </div>
@@ -280,6 +281,30 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 1.5 Highlights Banner */}
+        <section className="mx-auto mt-6 w-full overflow-hidden rounded-2xl bg-[#0f2e54] shadow-md border border-slate-700/50">
+          <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-slate-600/50">
+            {[
+              { top: "5-Star", bottom: "Rated Clinic" },
+              { top: "10+ Years", bottom: "in Andheri" },
+              { top: "MDS Doctor", bottom: "On-Site" },
+              { top: "Same-Day", bottom: "Appointments" },
+            ].map((stat, idx) => (
+              <div
+                key={idx}
+                className="flex flex-1 flex-col items-center justify-center py-4 px-2 hover:bg-[#153B6A] transition-colors"
+              >
+                <div className="text-xl sm:text-lg lg:text-2xl font-black tracking-tight text-white mb-0.5">
+                  {stat.top}
+                </div>
+                <div className="text-xs font-bold uppercase tracking-[0.15em] text-slate-300">
+                  {stat.bottom}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* 2. About Clinic - Screenshot Matching Layout */}
         <section className="mt-16 grid gap-8 lg:grid-cols-[1.2fr_minmax(0,1fr)] items-start">
           {/* Left: Doctor Biography */}
@@ -297,23 +322,7 @@ export default function Home() {
             <p className="text-sm leading-relaxed text-slate-500">
               She is known for her warm, calming demeanor, making even the most anxious patients feel at ease. Believing in a partnership with her patients, Dr. Singh prioritizes clear communication and personalized care plans, ensuring every treatment is tailored for long-term health and well-being. Her commitment is to provide you with a dental experience that is as comfortable as it is transformative.
             </p>
-            <div className="grid gap-3 sm:grid-cols-3 pt-1">
-              <div className="rounded-2xl bg-amber-50/80 p-4 shadow-sm border border-amber-100">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-amber-700">Experience</p>
-                <p className="mt-1 text-xl font-black text-slate-900">10+ Years</p>
-                <p className="mt-1 text-[11px] text-slate-500 font-black">Trusted dental care in Andheri East</p>
-              </div>
-              <div className="rounded-2xl bg-amber-50/80 p-4 shadow-sm border border-amber-100">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-amber-700">Technology</p>
-                <p className="mt-1 text-xl font-black text-slate-900">Digital X-Ray</p>
-                <p className="mt-1 text-[11px] text-slate-500 font-black">Modern, low-radiation imaging</p>
-              </div>
-              <div className="rounded-2xl bg-amber-50/80 p-4 shadow-sm border border-amber-100">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-amber-700">Comfort</p>
-                <p className="mt-1 text-xl font-black text-slate-900">Painless Care</p>
-                <p className="mt-1 text-[11px] text-slate-500 font-black">Gentle, patient-friendly approach</p>
-              </div>
-            </div>
+
             <div className="grid grid-cols-2 gap-3 pt-1 text-sm">
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
@@ -333,6 +342,33 @@ export default function Home() {
                 <p className="text-[10px] font-black uppercase tracking-widest text-amber-700">Experience</p>
                 <p className="mt-1 text-sm font-bold text-slate-900">Ex-Senior Resident, MGM Dental College</p>
               </div>
+            </div>
+            <div className="pt-4">
+              <a
+                href="#appointment"
+                className="group flex flex-col sm:flex-row w-full items-center justify-between gap-4 rounded-3xl bg-slate-900 p-4 shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-slate-800"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-500 text-white shadow-inner">
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm font-black text-white sm:text-lg tracking-tight">
+                      Book Your Consultation
+                    </p>
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-amber-400 mt-0.5">
+                      with Dr. Poonam
+                    </p>
+                  </div>
+                </div>
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-700 text-white transition-transform group-hover:translate-x-1 sm:h-12 sm:w-12 group-hover:bg-amber-500">
+                  <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -368,37 +404,43 @@ export default function Home() {
               {
                 title: "Dental Implants",
                 desc: "Replace missing teeth with natural-looking, long-lasting implants.",
-                icon: "🦷"
+                icon: "🦷",
+                buttonText: "Book Implant Consult"
               },
               {
                 title: "Root Canal Treatment (RCT)",
                 desc: "Save damaged teeth with painless, advanced root canal procedures.",
-                icon: "⚡"
+                icon: "⚡",
+                buttonText: "Get Free Evaluation"
               },
               {
                 title: "Braces & Aligners",
                 desc: "Straighten your teeth with metal, ceramic or clear aligners.",
-                icon: "📏"
+                icon: "📏",
+                buttonText: "Book Now"
               },
               {
                 title: "Teeth Whitening",
                 desc: "Get a brighter smile with safe and effective whitening.",
-                icon: "✨"
+                icon: "✨",
+                buttonText: "Book Now"
               },
               {
                 title: "Smile Makeover",
                 desc: "Design your dream smile with veneers, bonding and more.",
-                icon: "💎"
+                icon: "💎",
+                buttonText: "Book Now"
               },
               {
                 title: "Kids Dentistry",
                 desc: "Gentle treatments specially designed for children.",
-                icon: "👶"
+                icon: "👶",
+                buttonText: "Book Now"
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="group rounded-[2.5rem] bg-[#B8860B] p-6 shadow-sm shadow-amber-100 ring-1 ring-amber-100/70 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-200"
+                className="group flex flex-col rounded-[2.5rem] bg-[#B8860B] p-6 shadow-sm shadow-amber-100 ring-1 ring-amber-100/70 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-200"
               >
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100/20 text-2xl">
                   {item.icon}
@@ -406,16 +448,71 @@ export default function Home() {
                 <h3 className="text-lg font-black text-white">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-amber-50 font-medium leading-relaxed">
+                <p className="mt-2 text-sm text-amber-50 font-medium leading-relaxed flex-grow">
                   {item.desc}
                 </p>
+                <a
+                  href="#appointment"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-white group-hover:text-amber-200 transition-colors"
+                >
+                  {item.buttonText}
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </a>
               </div>
             ))}
           </div>
         </section>
 
+        {/* Testimonials */}
+        <section className="mt-32 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[80%] bg-amber-50/50 -z-10 blur-[120px] rounded-full"></div>
 
+          <div className="text-center space-y-4 mb-16 relative">
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100/50 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.3em] text-amber-800 ring-1 ring-amber-200/50 mb-2">
+              Testimonials
+            </div>
+            <h2 className="text-4xl font-black text-slate-900 sm:text-5xl tracking-tight">
+              What Our Patients in <span className="text-amber-700 relative">
+                Andheri Say
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-amber-200/60 -z-10 rounded-full"></span>
+              </span>
+            </h2>
+          </div>
 
+          <div className="mx-auto max-w-4xl">
+            <div className="relative rounded-[2.5rem] bg-white p-8 sm:p-12 shadow-2xl shadow-slate-200/50 ring-1 ring-slate-100">
+              <div className="absolute -top-6 -left-6 text-amber-200 opacity-50 hidden sm:block">
+                <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                </svg>
+              </div>
+
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="flex gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+
+                <p className="text-xl sm:text-2xl font-medium text-slate-700 leading-relaxed italic mb-8">
+                  &quot;Got my implant done here — painless and very professional. Dr. Poonam explained everything clearly. Highly recommend to anyone in Andheri!&quot;
+                </p>
+
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-amber-700 font-black text-xl">
+                    S
+                  </div>
+                  <div className="text-left">
+                    <p className="text-base font-black text-slate-900">Suresh K., Chakala</p>
+                    <p className="text-sm font-bold text-slate-500">March 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* 5. Special Offers */}
         <section className="mt-32 relative">
@@ -559,6 +656,60 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="mt-32 relative">
+          <div className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100/50 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.3em] text-amber-800 ring-1 ring-amber-200/50 mb-2">
+              Common Questions
+            </div>
+            <h2 className="text-4xl font-black text-slate-900 sm:text-5xl tracking-tight">
+              Frequently Asked <span className="text-amber-700">Questions</span>
+            </h2>
+          </div>
+
+          <div className="mx-auto max-w-4xl grid gap-4">
+            {[
+              {
+                q: "1. Is the dental consultation really free?",
+                a: "Yes — 100% free for new patients. No consultation charges, no hidden fees. Dr. Singh will evaluate your dental health and suggest the best treatment plan, completely at no cost."
+              },
+              {
+                q: "2. Is the treatment painful?",
+                a: "We use the latest painless techniques and advanced local anesthesia. Most patients are surprised at how comfortable their procedure is. Pain-free dentistry is our promise."
+              },
+              {
+                q: "3. Are dental implants safe?",
+                a: "Absolutely. We use internationally certified implant systems with a very high success rate. Dr. Singh has completed 500+ successful implant procedures."
+              },
+              {
+                q: "4. How long does a root canal take?",
+                a: "Most root canals at our clinic are completed in a single visit of 60–90 minutes. Advanced cases may need 2 visits."
+              },
+              {
+                q: "5. Do you treat children?",
+                a: "Yes, we have a dedicated kids dentistry setup with a child-friendly environment. Children from age 2 onwards are welcome."
+              }
+            ].map((faq, idx) => (
+              <details
+                key={idx}
+                className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md [&_summary::-webkit-details-marker]:hidden"
+              >
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-black text-slate-900 sm:text-lg">
+                  {faq.q}
+                  <span className="transition duration-300 group-open:-rotate-180 text-amber-600">
+                    <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm font-medium leading-relaxed text-slate-600 sm:text-base border-t border-slate-100 pt-4">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
           </div>
         </section>
 
