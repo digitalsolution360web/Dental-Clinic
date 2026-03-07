@@ -24,14 +24,8 @@ export default function Home() {
       setShowPopup(true);
     }, 3000);
 
-    // Hide popup after 20 seconds to ensure it's seen (debugging)
-    const hideTimer = setTimeout(() => {
-      setShowPopup(false);
-    }, 20000);
-
     return () => {
       clearTimeout(showTimer);
-      clearTimeout(hideTimer);
     };
   }, []);
 
