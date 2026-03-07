@@ -371,32 +371,32 @@ export default function Home() {
             {[
               {
                 title: "Dental Implants",
-                desc: "Replace missing teeth with natural-looking, long-lasting implants.",
+                desc: "Missing tooth? Get a permanent, natural-looking implant that lasts a lifetime. No more gaps. No discomfort.",
                 icon: "🦷"
               },
               {
-                title: "Root Canal Treatment (RCT)",
-                desc: "Save damaged teeth with painless, advanced root canal procedures.",
+                title: "Root Canal (RCT)",
+                desc: "Save your natural tooth — no pain, no drama. Our advanced RCT is done in a single visit in most cases.",
                 icon: "⚡"
               },
               {
                 title: "Braces & Aligners",
-                desc: "Straighten your teeth with metal, ceramic or clear aligners.",
+                desc: "Crooked teeth? Choose from metal, ceramic, or invisible aligners — all at honest prices, all at your pace.",
                 icon: "📏"
               },
               {
                 title: "Teeth Whitening",
-                desc: "Get a brighter smile with safe and effective whitening.",
+                desc: "Look 5 years younger in 60 minutes. Professional-grade whitening — safe, fast, and long-lasting results.",
                 icon: "✨"
               },
               {
                 title: "Smile Makeover",
-                desc: "Design your dream smile with veneers, bonding and more.",
+                desc: "Veneers, bonding, contouring — we design the smile you've always wanted, tailored to your face.",
                 icon: "💎"
               },
               {
                 title: "Kids Dentistry",
-                desc: "Gentle treatments specially designed for children.",
+                desc: "Fun, gentle, and anxiety-free dental care for children. Dr. Singh's calming approach makes kids look forward to visits.",
                 icon: "👶"
               },
             ].map((item) => (
@@ -430,13 +430,13 @@ export default function Home() {
             <div className="relative flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-end z-10">
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 rounded-full bg-amber-100/50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800 ring-1 ring-amber-200/50">
-                  Exclusive Benefits
+                 This Month's
                 </div>
                 <h2 className="text-3xl font-black text-slate-900 sm:text-4xl">
-                  Special Offers <span className="text-amber-700">This Month</span>
+                 Exclusive Offers —  <span className="text-amber-700">Only 12 Slots Remaining</span>
                 </h2>
                 <p className="max-w-xl text-slate-600 font-medium sm:text-lg">
-                  Limited-time opportunities to prioritize your oral health with expert care and modern technology.
+                  We've reserved a limited number of new patient slots this month with these special benefits. Once full, these offers close.
                 </p>
               </div>
               <div className="lg:text-right">
