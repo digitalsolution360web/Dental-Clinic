@@ -1,8 +1,9 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Phone, MapPin, X } from "lucide-react";
 
 export default function Home() {
   const phonePrimary = "+91 99677 56611";
@@ -14,6 +15,25 @@ export default function Home() {
   // Aliases for variables used in some sections
   const phoneNumberDisplay = phonePrimary;
   const phoneNumberHref = phonePrimaryHref;
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Show popup after 3 seconds
+    const showTimer = setTimeout(() => {
+      setShowPopup(true);
+    }, 3000);
+
+    // Hide popup after 20 seconds to ensure it's seen (debugging)
+    const hideTimer = setTimeout(() => {
+      setShowPopup(false);
+    }, 20000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -934,6 +954,127 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Inquiry Popup Modal */}
+      {showPopup && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="relative w-full max-w-md bg-[#B8860B] rounded-[2.5rem] shadow-2xl overflow-hidden ring-1 ring-amber-100/20 animate-in zoom-in-95 duration-300 p-6 sm:p-8">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 p-2 rounded-full bg-black/10 text-white hover:bg-black/20 transition-colors z-10"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            <h2 className="text-xl font-bold text-white sm:text-2xl">
+              Book Your Consultation
+            </h2>
+            <p className="mt-1 text-xs text-amber-50 sm:text-sm">
+              Takes 30 seconds. No payment needed. Our team will call you to confirm your slot.
+            </p>
+
+            <form
+              className="mt-6 space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setShowPopup(false);
+              }}
+            >
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="popup-name"
+                  className="text-xs font-semibold text-white ml-1"
+                >
+                  Name
+                </label>
+                <input
+                  id="popup-name"
+                  name="name"
+                  type="text"
+                  required
+                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:ring-4 focus:ring-white/20"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="popup-phone"
+                  className="text-xs font-semibold text-white ml-1"
+                >
+                  Phone Number
+                </label>
+                <input
+                  id="popup-phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:ring-4 focus:ring-white/20"
+                  placeholder="Enter your mobile number"
+                />
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="popup-treatment"
+                  className="text-xs font-semibold text-white ml-1"
+                >
+                  Treatment Needed
+                </label>
+                <div className="relative">
+                  <select
+                    id="popup-treatment"
+                    name="treatment"
+                    className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none appearance-none cursor-pointer focus:ring-4 focus:ring-white/20"
+                  >
+                    <option value="">Select treatment</option>
+                    <option>Dental Implants</option>
+                    <option>Root Canal (RCT)</option>
+                    <option>Braces &amp; Aligners</option>
+                    <option>Teeth Whitening</option>
+                    <option>Smile Makeover</option>
+                    <option>Kids Dentistry</option>
+                    <option>General Checkup / Cleaning</option>
+                    <option>Others</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+                    <svg className="h-4 w-4 fill-current rotate-180" viewBox="0 0 20 20">
+                      <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="popup-date"
+                  className="text-xs font-semibold text-white ml-1"
+                >
+                  Preferred Date
+                </label>
+                <input
+                  id="popup-date"
+                  name="date"
+                  type="date"
+                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:ring-4 focus:ring-white/20"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#00b289] px-5 py-4 text-sm font-black text-white shadow-xl shadow-black/10 transition hover:bg-[#00a17c] active:scale-[0.98]"
+              >
+                🗓️ Reserve My Slot Now
+              </button>
+
+              <p className="text-[11px] leading-snug text-center text-amber-50/80 font-medium">
+                Our team will confirm your appointment time over call / WhatsApp.
+              </p>
+            </form>
+          </div>
+        </div>
+      )}
     </div >
   );
 }
