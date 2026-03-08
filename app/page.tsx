@@ -31,34 +31,35 @@ export default function Home() {
 
    const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setLoading(true);
 
-    const formData = new FormData(e.target);
+  const form = e.currentTarget; // safer than e.target
+  const formData = new FormData(form);
 
-    const data = {
-      name: formData.get("name"),
-      phone: formData.get("phone"),
-      treatment: formData.get("treatment"),
-      date: formData.get("date"),
-    };
-
-    const res = await fetch("/api/appointment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await res.json();
-
-    alert(result.message);
-
-    setLoading(false);
-    e.target.reset();
+  const data = {
+    name: formData.get("name"),
+    phone: formData.get("phone"),
+    treatment: formData.get("treatment"),
+    date: formData.get("date"),
   };
+
+  const res = await fetch("/api/appointment", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await res.json();
+
+  alert(result.message);
+
+  setLoading(false);
+  form.reset();
+};
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
