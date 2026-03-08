@@ -59,6 +59,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
   setLoading(false);
   form.reset();
+  window.location.href = '/thank-you';
 };
 
   return (
