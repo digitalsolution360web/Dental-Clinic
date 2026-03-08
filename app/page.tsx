@@ -1001,10 +1001,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
             <form
               className="mt-6 space-y-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setShowPopup(false);
-              }}
+              onSubmit={handleSubmit}
             >
               <div className="space-y-1.5">
                 <label
@@ -1088,9 +1085,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
               <button
                 type="submit"
+                disabled={loading}
                 className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#00b289] px-5 py-4 text-sm font-black text-white shadow-xl shadow-black/10 transition hover:bg-[#00a17c] active:scale-[0.98]"
               >
-                🗓️ Reserve My Slot Now
+               {loading ? "Sending..." : "📅 Reserve My Slot Now"}
               </button>
 
               <p className="text-[11px] leading-snug text-center text-amber-50/80 font-medium">
