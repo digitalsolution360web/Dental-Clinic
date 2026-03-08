@@ -29,6 +29,37 @@ export default function Home() {
     };
   }, []);
 
+   const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+
+    const data = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      treatment: formData.get("treatment"),
+      date: formData.get("date"),
+    };
+
+    const res = await fetch("/api/appointment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+
+    alert(result.message);
+
+    setLoading(false);
+    e.target.reset();
+  };
+
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Sticky Bottom Bar – mobile only */}
@@ -233,9 +264,7 @@ export default function Home() {
 
             <form
               className="mt-5 space-y-3"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
+              onSubmit={handleSubmit}
             >
               <div className="space-y-1.5">
                 <label
@@ -310,12 +339,13 @@ export default function Home() {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="mt-2 flex w-full items-center justify-center rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-500/40 transition hover:bg-emerald-600"
-              >
-                📅 Reserve My Slot Now
-              </button>
+             <button
+        type="submit"
+        disabled={loading}
+        className="mt-2 flex w-full items-center justify-center rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white"
+      >
+        {loading ? "Sending..." : "📅 Reserve My Slot Now"}
+      </button>
 
               <p className="text-[11px] leading-snug text-amber-50">
                 Our team will confirm your
