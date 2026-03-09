@@ -401,20 +401,29 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <div className="grid grid-cols-2 gap-3 pt-1 text-sm">
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
+                BDS
+              </div>
+                <div className="flex items-center gap-2 font-bold text-slate-700">
+                <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
+                MDS
+              </div>
+              <div className="flex items-center gap-2 font-bold text-slate-700">
+                <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
                 Periodontist
               </div>
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                Oral implantologist
+                Oral Implantologist
+              </div>
+               <div className="flex items-center gap-2 font-bold text-slate-700">
+                <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
+               10+ Years of Experience
               </div>
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                Ex D.y patil dental college
+                D.Y Patil Dental College
               </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700">
-                <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                Kindly may the changes
-              </div>
+             
             </div>
             <div className="pt-4">
               <a
