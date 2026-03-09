@@ -14,7 +14,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Andheri Dental Clinic | Advanced Painless Dentistry",
-  description: "Experience world-class dental care with Dr. Poonam Singh. Specialist in Periodontics and Oral Implantology in Andheri East, Mumbai.",
+  description: "Experience world-class dental care with Dr. Poonam Singh. Periodontist and Oral implantologist in Andheri East, Mumbai.",
 };
 
 export default function RootLayout({

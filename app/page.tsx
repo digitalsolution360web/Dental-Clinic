@@ -394,34 +394,26 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
             </h2>
             <p className="text-sm sm:text-base leading-relaxed text-slate-600">
-              Dr. Poonam Brahmadeen Singh (BDS, MDS — Periodontics & Oral Implantology) has been restoring smiles in Andheri East since 2014. A former Senior Resident at the prestigious MGM Dental College, she specializes in pain-free implants, advanced gum treatments, and complete smile makeovers.  With over a decade of experience and 1,000+ successful procedures, Dr. Singh is known for one thing above all — making even the most anxious patients feel completely at ease.
+              Dr. Poonam Brahmadeen Singh (BDS, MDS — Periodontist & Oral implantologist) has been restoring smiles in Andheri East since 2014. A former Senior Resident at the prestigious D.y patil dental college, she specializes in pain-free implants, advanced gum treatments, and complete smile makeovers.  With over a decade of experience and 1,000+ successful procedures, Dr. Singh is known for one thing above all — making even the most anxious patients feel completely at ease.
             </p>
 
 
             <div className="grid grid-cols-2 gap-3 pt-1 text-sm">
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                BDS
+                Periodontist
               </div>
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                MDS
+                Oral implantologist
               </div>
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                Periodontics
+                Ex D.y patil dental college
               </div>
               <div className="flex items-center gap-2 font-bold text-slate-700">
                 <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                Oral Implantology
-              </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700">
-                <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                10 Years+
-              </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700">
-                <span className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center text-[10px] text-emerald-700 shrink-0">✓</span>
-                Ex-MGM Dental College
+                Kindly may the changes
               </div>
             </div>
             <div className="pt-4">
