@@ -16,9 +16,9 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "New Dental Appointment Request",
+      subject: "Lp Andheri Dental Request",
       html: `
-        <h2>New Appointment Request</h2>
+        <h2>New Lp Andheri Dental Request</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Treatment:</strong> ${treatment}</p>
