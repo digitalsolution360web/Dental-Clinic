@@ -1002,7 +1002,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </p>
 
             <form
-              className="mt-6 space-y-4"
+              className="mt-5 space-y-3"
               onSubmit={handleSubmit}
             >
               <div className="space-y-1.5">
@@ -1017,7 +1017,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   name="name"
                   type="text"
                   required
-                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:ring-4 focus:ring-white/20"
+                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:ring-4 focus:ring-white/20"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -1034,7 +1034,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   name="phone"
                   type="tel"
                   required
-                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:ring-4 focus:ring-white/20"
+                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:ring-4 focus:ring-white/20"
                   placeholder="Enter your mobile number"
                 />
               </div>
@@ -1050,7 +1050,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   <select
                     id="popup-treatment"
                     name="treatment"
-                    className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none appearance-none cursor-pointer focus:ring-4 focus:ring-white/20"
+                    className="w-full rounded-2xl border border-amber-200/20 bg-white px-3 py-2 text-sm text-slate-900 outline-none appearance-none cursor-pointer focus:ring-4 focus:ring-white/20"
                   >
                     <option value="">Select treatment</option>
                     <option>Dental Implants</option>
@@ -1062,7 +1062,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                     <option>General Checkup / Cleaning</option>
                     <option>Others</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
                     <svg className="h-4 w-4 fill-current rotate-180" viewBox="0 0 20 20">
                       <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
                     </svg>
@@ -1081,14 +1081,14 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   id="popup-date"
                   name="date"
                   type="date"
-                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:ring-4 focus:ring-white/20"
+                  className="w-full rounded-2xl border border-amber-200/20 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:ring-4 focus:ring-white/20"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#00b289] px-5 py-4 text-sm font-black text-white shadow-xl shadow-black/10 transition hover:bg-[#00a17c] active:scale-[0.98]"
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#00b289] px-5 py-2.5 text-sm font-black text-white shadow-xl shadow-black/10 transition hover:bg-[#00a17c] active:scale-[0.98]"
               >
                {loading ? "Sending..." : "📅 Reserve My Slot Now"}
               </button>
