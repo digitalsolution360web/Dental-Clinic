@@ -3,8 +3,14 @@
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import Script from "next/script";
+import {useEffect} from "react";
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 3000);
+  }, []);
   return (
     <>
     {/* Google Analytics */}
