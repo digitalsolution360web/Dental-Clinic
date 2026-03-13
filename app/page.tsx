@@ -18,16 +18,15 @@ export default function Home() {
 
   const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    // Show popup after 3 seconds
-    const showTimer = setTimeout(() => {
-      setShowPopup(true);
-    }, 3000);
+  // useEffect(() => {
+  //   const showTimer = setTimeout(() => {
+  //     setShowPopup(true);
+  //   }, 3000);
 
-    return () => {
-      clearTimeout(showTimer);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(showTimer);
+  //   };
+  // }, []);
 
    const [loading, setLoading] = useState(false);
 
@@ -54,8 +53,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   });
 
   const result = await res.json();
-
-  alert(result.message);
 
   setLoading(false);
   form.reset();
